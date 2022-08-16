@@ -1,0 +1,30 @@
+@endpoint = https://roc62u2f9l.execute-api.ap-southeast-1.amazonaws.com/prod/
+
+GET {{endpoint}}/spaces/
+###
+
+GET {{endpoint}}/spaces?spaceId=a456a165-d021-4c54-b8be-233363bf1ea4
+###
+
+PUT {{endpoint}}/spaces?spaceId=a456a165-d021-4c54-b8be-233363bf1ea4
+Content-Type: application/json
+
+{
+  "location": "Place to Delete"
+}
+###
+
+GET {{endpoint}}/spaces?location=London
+###
+
+POST  {{endpoint}}/spaces/
+Content-Type: application/json
+
+{
+  "location": "London",
+  "name": "Best location"
+}
+###
+
+DELETE {{endpoint}}/spaces?spaceId=646b60ef-f736-4535-bcbe-46408b268e07
+###
